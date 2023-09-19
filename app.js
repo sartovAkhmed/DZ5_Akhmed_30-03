@@ -36,7 +36,8 @@ const endResultArray = []
 for(let i in arrayValues){
     const items = arrayValues[i]
     const filteredArray = items.filter(item => {
-        return typeof item !== 'number'
+        const a = String(item)
+        return a.length > 3
     })
     endResultArray.push(filteredArray)
 }
